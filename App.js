@@ -1,48 +1,21 @@
-// const heading = React.createElement("h1", {id: "heading"}, "Ram Ram React");
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Header from "./src/components/Header";
+import Body from "./src/components/Body";
+import restaurantData from "./utils/constant";
 
-const parent = React.createElement(
-    "div",
-    { id: "parent" },
-    [
-        React.createElement(
-            "div",
-            { id: "child" },
-            [
-                React.createElement("h1", {}, "Ram Ram React"),
-                React.createElement("h2", {}, "Namaste React"),
-            ]
-        ),
-        React.createElement(
-            "div",
-            { id: "child-2" },
-            [
-                React.createElement("h1", {}, "Ram Ram React"),
-                React.createElement("h2", {}, "Namaste React"),
-            ]
-        ),
-    ]
-);
+
+
+
  
-
-console.log(parent) //object
+const AppLayout = () => {
+    return (
+        <div className="app">
+            <Header />
+            <Body restaurantData={restaurantData} />
+        </div>
+    );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(parent)
-
-
-
-
-
-/**
- * 
- * 
- * <div id = parent>
- *   <div id = child
- *       <h1>Ram Ram React<h1>
- *       <h2> Namaste React<h2>
- * 
- *   <div id = child-2>
- *       <h1> Ram ram React</h1>
- *        <h2> Namaste React </h2>
- */
+root.render(<AppLayout />);

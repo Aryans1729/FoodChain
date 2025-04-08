@@ -1,3 +1,289 @@
-#parent {
-    color: red;
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 2px solid #ddd;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Adds subtle shadow */
+}
+
+/* Logo styling */
+.logo-container img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Bar */
+.nav-items ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.nav-items ul li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for nav items */
+.nav-items ul li:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* 📌 Restaurant Card Styling */
+.res-log {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+}
+
+.res-log:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Restaurant Image */
+.res-logo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Restaurant Details */
+.res-log h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.res-log h4 {
+    margin: 3px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* 📌 Body Container */
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Restaurant Container */
+.res-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Ensure cards are in a single row */
+    justify-content: center;
+    /* Center the cards horizontally */
+    align-items: flex-start;
+    /* Align cards to the top */
+    gap: 20px;
+    /* Spacing between cards */
+    overflow-x: auto;
+    /* Add horizontal scroll for overflow */
+    padding: 20px;
+}
+
+/* Search Bar */
+.search {
+    width: 50%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+/* 📌 Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f1f1f1;
+    font-size: 14px;
+    color: #666;
+    margin-top: 40px;
+}
+
+/* 📌 Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .nav-items ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .res-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search {
+        width: 80%;
+    }
+}
+
+.card-container {
+    display: flex;
+    /* Makes it a flex container */
+    flex-wrap: wrap;
+    /* Ensures cards wrap if they exceed container width */
+    justify-content: center;
+    /* Centers cards horizontally */
+    gap: 16px;
+    /* Adds spacing between cards */
+}
+
+.card-container .restaurant-card {
+    flex: 1 1 300px;
+    /* Each card takes up space but does not shrink too much */
+    max-width: 300px;
+    /* Ensures cards don't grow too large */
+}
+
+.card {
+    width: 90%;
+    /* Adjust card width */
+    max-width: 400px;
+    /* Optional: Set max width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional: Add shadow */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-body p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: #888;
+}
+
+/* Style for the filter button container */
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-button {
+    padding: 12px 25px;
+    background-color: #28a745;
+    /* Green background */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-button:hover {
+    background-color: #218838;
+    /* Darker green on hover */
+    transform: translateY(-2px);
+    /* Slightly lift the button on hover */
+}
+
+.filter-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.6);
+    /* Green focus ring */
+}
+
+.filter-button:active {
+    transform: translateY(1px);
+    /* Button presses down on click */
+}
+
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card {
+    margin: 20px;
+    height: 400px;
+    width: 200px;
+    background-color: #f0f0f0;
+
 }
