@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 // import { FOODFIRE_API_URL } from "../../utils/constant"
 
 const Body = () => {

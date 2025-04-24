@@ -9,7 +9,7 @@ import Error from "./src/components/Error";
 import {
     createBrowserRouter, Outlet,  //React-router
     RouterProvider,
-} from "react-router";
+} from "react-router-dom";
 import RestaurantMenu from "./src/components/RestaurantsMenu";
 
 const AppLayout = () => {
