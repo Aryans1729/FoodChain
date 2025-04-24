@@ -25,26 +25,20 @@ Edit
 
 ### 1. Clone the repo
 
-```bash
 git clone https://github.com/aryans1729/healthychef.git
 cd healthychef
 
- Install dependencies
-bash
-Copy
-Edit
+#Install dependencies
+
 npm install
-3. Start development server
-bash
-Copy
-Edit
+
+#Start development server
+
 npm run dev
 The app should now be running on http://localhost:1234/
 
 📦 Build for Production
-bash
-Copy
-Edit
+
 npm run build
 Parcel will create a dist/ folder with your production build.
 
